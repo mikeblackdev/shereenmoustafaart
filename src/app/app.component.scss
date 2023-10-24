@@ -1,0 +1,29 @@
+#navigation-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#title {
+    display: flex;
+    width: 25%;
+    margin-left: 10px;
+}
+
+#navigation {
+    display: flex;
+    align-items: space-between;
+    width: 50%;
+}
+
+.fill {
+    height: 100%;
+    width: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    color:rgb(205, 205, 205);
+}
