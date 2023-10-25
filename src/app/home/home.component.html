@@ -1,7 +1,7 @@
-<div id="page">
+<div id="gallary-wrapper">
     <div id="gallary">
       <div id="pieces" *ngFor="let piece of pieces">
-        <img class="piece" routerLink="/closeup" (click)="selectPiece(piece)" src="../../assets/{{piece}}"/>
+        <img class="piece" routerLink="/closeup" (click)="selectPiece(piece)" src="../../assets/{{piece.name}}"/>
       </div>
     </div>
 </div>

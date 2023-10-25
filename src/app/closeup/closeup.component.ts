@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectService } from '../select.service';
+import { piece } from '../interfaces/piece.interface';
 
 @Component({
     selector: 'closeup',
@@ -7,13 +8,12 @@ import { SelectService } from '../select.service';
     styleUrls: ['./closeup.component.scss']
 })
 export class CloseupComponent implements OnInit {
-    public piece = '';
+    public piece: piece = { name: '', description: '' };
     constructor(private _selectSvc: SelectService) {}
 
     ngOnInit() {
         setTimeout(() => {
             this.piece = this._selectSvc.getPiece();
         });
-        
     }
 }

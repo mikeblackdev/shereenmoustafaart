@@ -1,18 +1,27 @@
 import { Injectable, OnInit} from "@angular/core";
-import { Subject } from "rxjs";
+import { piece } from './interfaces/piece.interface';
 
 @Injectable()
 export class SelectService {
-    private _selection: any = '';
+    private _selection: any;
     constructor() {
-        this._selection = localStorage.getItem('selection');
-        console.log('service got:', this._selection);
+        try {
+            this._selection = JSON.parse(<any>localStorage.getItem('selection'));
+            console.log('service got:', this._selection);
+        } catch (err) {
+            console.error('There was a problem setting the peice in local storage:', err);
+        }
     }
-    public select(selection: string): void {
+    public select(selection: piece): void {
         this._selection = selection;
-        localStorage.setItem('selection', selection);
+        console.log('JSON:', JSON.stringify(selection));
+        try {
+            localStorage.setItem('selection', JSON.stringify(selection));
+        } catch (err) {
+            console.error('There was a problem setting the peice in local storage:', err);
+        }
     }
-    public getPiece(): string {
+    public getPiece(): piece {
         return this._selection;
     }
 }

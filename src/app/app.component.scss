@@ -3,21 +3,17 @@
     flex-direction: row;
 }
 
-#title {
-    display: flex;
-    width: 25%;
-    margin-left: 10px;
-}
-
 #navigation {
     display: flex;
     align-items: space-between;
-    width: 50%;
+    width: 100%;
 }
 
 .fill {
+    display: flex;
     height: 100%;
     width: 100%;
+    justify-content: center;
 }
 
 .clickable {
