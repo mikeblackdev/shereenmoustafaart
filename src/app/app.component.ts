@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'smart';
+  public navStyle: any;
+
+  constructor(private router: Router) {
+    router.events.subscribe((event) => {
+      if(event instanceof NavigationStart) {
+        this.navStyle = { 'background-color': event.url === '/' ? 'white' : 'black', 'color': event.url === '/' ? 'black' : 'white' };
+      }
+    });
+  }
 }
