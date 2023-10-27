@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CloseupComponent } from './closeup/closeup.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SelectService } from './select.service';
+import { ImgMagnifier } from 'ng-img-magnifier';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ImgMagnifier
   ],
   providers: [
     SelectService
