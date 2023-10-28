@@ -1,4 +1,4 @@
-export interface piece {
-    name: string;
-    description: string;
+export interface Piece {
+  name: string;
+  description: string;
 };

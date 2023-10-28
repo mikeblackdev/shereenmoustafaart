@@ -1,0 +1,26 @@
+#piece-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+::ng-deep #piece {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+::ng-deep .outerImg {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+::ng-deep #myimage {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+#description {
+  height: 100%;
+  width: 100%;
+}

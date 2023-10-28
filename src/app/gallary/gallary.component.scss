@@ -1,0 +1,18 @@
+#gallary {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.piece {
+  background: rgb(205, 205, 205);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 500px;
+  margin-right: 10px;
+  cursor: pointer;
+}

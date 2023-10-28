@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,16 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public navStyle: any;
+  public navStyle!: { 'background-color': string; 'color': string; };
 
-  constructor(private router: Router) {
-    router.events.subscribe((event) => {
-      if(event instanceof NavigationStart) {
-        this.navStyle = { 'background-color': event.url === '/' ? 'white' : 'black', 'color': event.url === '/' ? 'black' : 'white' };
+  constructor(private _router: Router) {
+    _router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        // invert nav bar color based for home vs. other
+        this.navStyle = {
+          'background-color': event.url === '/' ? 'white' : 'black',
+          'color': event.url === '/' ? 'black' : 'white'
+        };
       }
     });
   }

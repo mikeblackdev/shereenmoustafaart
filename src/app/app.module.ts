@@ -1,33 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+
+// Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { GallaryComponent } from './gallary/gallary.component';
 import { StillsComponent } from './stills/stills.component';
 import { MotionComponent } from './motion/motion.component';
 import { ContactComponent } from './contact/contact.component';
-import { CloseupComponent } from './closeup/closeup.component';
-import { RouterModule, Routes } from '@angular/router';
-import { SelectService } from './select.service';
+import { PieceComponent } from './piece/piece.component';
+
+// Services
+import { PieceService } from './services/piece.service';
+
+// Packages
 import { ImgMagnifier } from 'ng-img-magnifier';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: GallaryComponent },
   { path: 'stills', component: StillsComponent },
   { path: 'motion', component: MotionComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'closeup', component: CloseupComponent }
+  { path: 'piece', component: PieceComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    GallaryComponent,
     StillsComponent,
     MotionComponent,
     ContactComponent,
-    CloseupComponent
+    PieceComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ const routes: Routes = [
     ImgMagnifier
   ],
   providers: [
-    SelectService
+    PieceService
   ],
   bootstrap: [AppComponent],
   exports: [RouterModule]
