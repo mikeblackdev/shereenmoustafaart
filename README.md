@@ -8,4 +8,4 @@ Click on the picture below for a very short tour.
 <br>
 This link will be updated weekly. Last update: 10/25.
 <br><br>
-[![IMAGE ALT TEXT](./src/assets/smart_thumbnail.png)](https://youtu.be/5XrBne17Dm4?si=EQWj6n1GhQ9RzXQV "Shereen Moustafa Websiste")
+[![IMAGE ALT TEXT](./src/assets/smart_thumbnail.png)](https://youtu.be/tZtlU2GSWOE?si=cOMavEVrEl0p7jzw "Shereen Moustafa Websiste")
