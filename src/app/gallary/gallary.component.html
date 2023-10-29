@@ -1,8 +1,9 @@
 <div id="gallary-wrapper">
-    <div id="gallary">
+    <div id="gallary" class="gallary" [ngStyle]="flexDirection">
       <div id="pieces" *ngFor="let piece of pieces">
         <img
           class="piece"
+          [ngStyle]="width"
           routerLink="/piece"
           src="../../assets/{{ piece.name }}"
           (click)="selectPiece(piece)"/>
