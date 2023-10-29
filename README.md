@@ -6,6 +6,6 @@ Demo pieces are the work of Sir Francis Bacon.
 <br><br>
 Click on the picture below for a very short tour.
 <br>
-This link will be updated weekly. Last update: 10/25.
+This link will be updated accodingly. Last update: 10/28.
 <br><br>
-[![IMAGE ALT TEXT](./src/assets/smart_thumbnail.png)](https://youtu.be/tZtlU2GSWOE?si=cOMavEVrEl0p7jzw "Shereen Moustafa Websiste")
+[![IMAGE ALT TEXT](./src/assets/smart_thumbnail.png)](https://youtu.be/mEEoc__hEwE?si=VuBWfE0FHnfnuU3E "Shereen Moustafa Websiste")
