@@ -16,6 +16,12 @@ import { PieceService } from './services/piece.service';
 
 // Packages
 import { ImgMagnifier } from 'ng-img-magnifier';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
+// Material
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
   { path: '', component: GallaryComponent },
@@ -38,7 +44,11 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    ImgMagnifier
+    ImgMagnifier,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     PieceService
